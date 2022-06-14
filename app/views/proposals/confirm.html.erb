@@ -1,0 +1,89 @@
+
+<div class="header-container-small" style="background-image: linear-gradient(-225deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.18) 50%), url('<%= cl_image_path @proposal.project.photo, crop: :fill %>'); background-attachment: fixed;">
+
+  <div class="header-content">
+    <div class="text-center intro-text">
+      <h1>Proposal Status</h1>
+    </div>
+  </div>
+</div>
+<div class="one-column-cta" style="background-color: #f4f4f4; height: 349px;">
+  <div class="container-fluid">
+     <div class="cta-content">
+            <hr>
+            <div class="text">
+              <h1 style="color: #022832; line-height: 30px;"><%= @proposal.project.organization.name %> wants your team <br> to manage the implementation of the project: <%= @proposal.project.title %></h1>
+              <p style="color: #022832;">Accept it now and start working in the Office</p>
+              <div class="cta-button">
+                <%= link_to "Accept", project_classroom_path, class: "custom-primary-btn"  %>
+                 <%= link_to "Decline", projects_path, class: "terciary-primary-btn"  %>
+              </div>
+            </div>
+          </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="two-column-content">
+    <div class="row">
+      <div class="double-cta">
+        <div class="left-cta col-xs-12 col-md-6" style="background-image: url('<%= cl_image_path 'bg2.jpg' %>'); background-size: cover; background-position: center">
+          <div class="cta-content">
+            <hr>
+            <div class="text">
+              <h1>Team</h1>
+              <div class="team-avatar">
+                <% @team_members.each do |member| %>
+                <% if member.user.avatar %>
+                <%= cl_image_tag member.user.avatar, class: "member-avatar" %>
+                <% end %>
+                <% end %>
+              </div>
+              <% @team_members.each do |member| %>
+              <p><%= member.user.first_name %>
+                <% if member.user.last_name %>
+                <%= member.user.last_name %></p>
+                <% end %>
+                <% end %>
+                <br>
+                <p class="tag-label">Application Status</p>
+                <% if @proposal.joinable %>
+                <p>This team is closed</p>
+                <% else %>
+                <p>This team is open for applicants</p>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="right-cta col-xs-12 col-md-6" style="background-image: url('<%= cl_image_path 'bg3.jpg' %>'); background-size: cover; background-position: center">
+          <div class="cta-content">
+            <hr>
+            <div class="text">
+              <h1>Elevator Pitch</h1>
+              <p class="tag-label"><%= @proposal.project.organization.name %></p>
+              <p><strong> <%= @proposal.pitch %></strong></p>
+              <br>
+              <p class="tag-label">Status</p>
+              <p><%= @proposal.status %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="one-column-content" style="color: #0e3849;"">
+  <div class="container-fluid">
+    <div class="cta-content">
+      <hr>
+      <div class="text">
+        <h1>About the team</h1>
+        <p><%= @proposal.team.about_us%></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>

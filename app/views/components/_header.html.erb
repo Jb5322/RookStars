@@ -1,0 +1,14 @@
+<div class="header-container" style="background-image: url('<%= cl_image_path 'bg.jpg' %>'); background-size: cover; background-position: center; background-attachment: fixed">
+  <div class="logo-home">
+    <%= image_tag "logo.png", class: "logo-home", alt: "Rookstars" %>
+  </div>
+  <div class="header-content">
+    <div class="text-center intro-text">
+      <h1><%= image_tag 'white_logo_red_font-(1).png' %> alumni <br>
+      coding to <span id="title-typed-footer"></span></h1>
+    </div>
+  </div>
+</div>
+
+
+ <%= javascript_pack_tag 'typed' %>

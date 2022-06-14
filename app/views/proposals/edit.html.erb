@@ -1,0 +1,21 @@
+<%= render 'components/progress' %>
+
+  <div class="container-add-description">
+    <div class="container">
+      <div class="col-xs-6 col-xs-offset-3">
+        <div class="form">
+
+            <%= simple_form_for [@project, @proposal] do |f| %>
+            <h1 class="text-center"><%= f.label :pitch, "Your Pitch" %></h1>
+            <p>What is your value proposition for the NGO?</p>
+            <%= fields_for :proposal do |proposal| %>
+            <%= proposal.text_area :pitch %>
+            <% end %>
+            <br>
+            <%= f.button :submit, class: "custom-primary-btn" %>
+            <% end %>
+
+        </div>
+      </div>
+    </div>
+  </div>

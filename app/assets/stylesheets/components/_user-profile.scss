@@ -1,0 +1,25 @@
+.box-about-me {
+  width: 50vw;
+  min-height: 30vh;
+  align-items: center;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: $secondary;
+  opacity: 0.8;
+  color:white;
+}
+
+.box-about-me-2 {
+    width: 87vw;
+    min-height: 25vh;
+    align-items: center;
+    margin: 10px auto;
+    padding: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-radius: 5px;
+    background-color: #303030;
+    opacity: 0.8;
+    color: white;
+}

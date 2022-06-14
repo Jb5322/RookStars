@@ -1,0 +1,51 @@
+.one-column-content {
+ text-align: left;
+ overflow: scroll;
+ -webkit-overflow: scroll;
+ background-size: cover;
+ height: 300px;
+ hr {
+   margin-bottom: 0px;
+   width: 78px;
+   margin-top: 70px;
+   border-width: 6px;
+   display: inline-block;
+   border-color: $blue;
+ }
+ .tag-label {
+   color: #f4f4f463;
+ }
+ h1 {
+  font-weight: bold;
+  font-size: 24px;
+  text-align: left;
+  color: #022831;
+}
+p {
+  color: #022831;
+  margin-bottom: 1px;
+  font-weight: light;
+  font-size: 20px;
+}
+.text {
+  margin-bottom: 35px;
+  .organization_photo {
+    padding-top: 15px;
+    img {
+      max-width: 330px;
+    }
+  }
+}
+
+
+.cta-button {
+  margin: 20px 0px;
+
+}
+
+.cta-content {
+  margin-left: 65px;
+}
+
+}
+

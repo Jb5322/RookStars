@@ -1,0 +1,65 @@
+
+<div class="header-container-small" style="background-image: linear-gradient(-225deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.18) 50%), url('<%= cl_image_path @proposal.project.photo, crop: :fill %>'); background-attachment: fixed">
+
+  <div class="header-content">
+    <div class="text-center intro-text">
+      <h1>Your Proposal for <%= @proposal.project.organization.name %></h1>
+      <br>
+      <div class="cta-button">
+        <%= link_to "Check Project Status", project_proposal_confirm_path , class: "custom-primary-btn" %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="two-column-content">
+    <div class="row">
+      <div class="double-cta">
+        <div class="left-cta col-xs-12 col-md-6" style="background-image: url('<%= cl_image_path 'bg2.jpg' %>'); background-size: cover; background-position: center">
+          <div class="cta-content">
+            <hr>
+            <div class="text">
+              <h1>Team</h1>
+              <div class="team-avatar">
+                <% @proposal.team_members.each do |member| %>
+                <% if member.user.avatar %>
+                <%= cl_image_tag member.user.avatar, class: "member-avatar" %>
+                <% end %>
+                <% end %>
+              </div>
+              <% @proposal.team_members.each do |member| %>
+              <p><%= member.user.first_name %>
+                <% if member.user.last_name %>
+                <%= member.user.last_name %></p>
+                <% end %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+          <div class="right-cta col-xs-12 col-md-6" style="background-image: url('<%= cl_image_path 'bg3.jpg' %>'); background-size: cover; background-position: center">
+            <div class="cta-content">
+              <hr>
+              <div class="text">
+                <h1>The Pitch for <%= @proposal.project.organization.name %></h1>
+                <p><strong> <%= @proposal.pitch %></strong></p>
+                <br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="one-column-content" style="background-color: #f0f0f0; ">
+  <div class="container-fluid">
+    <div class="cta-content">
+      <hr>
+      <div class="text" style="color: #0e3849;">
+        <h1>About the team</h1>
+        <p><%= @proposal.team.about_us%></p>
+      </div>
+    </div>
+  </div>
+</div>
+

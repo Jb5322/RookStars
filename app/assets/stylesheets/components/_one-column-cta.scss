@@ -1,0 +1,35 @@
+.one-column-cta {
+   text-align: center;
+   background-color: $accent;
+  height: 300px;
+  overflow: scroll;
+ -webkit-overflow: scroll;
+  background-position: center;
+  background-size: cover;
+  hr {
+   margin-bottom: 0px;
+   width: 78px;
+   margin-top: 70px;
+   border-width: 6px;
+   display: inline-block;
+   border-color: $blue;
+   text-align: center;
+ }
+ h1 {
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  color: white;
+}
+p {
+  color: white;
+  font-weight: light;
+  font-size: 20px;
+}
+
+.cta-button {
+  margin: 20px 0px;
+
+}
+}
+

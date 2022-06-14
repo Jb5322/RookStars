@@ -1,0 +1,23 @@
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.avatar-large {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.member-avatar {
+  width: 70px;
+  border: solid 2px white;
+  height: 70px;
+  border-radius: 50%;
+  margin-left: -15px;
+}
+
+.team-list-items .avatar {
+  margin-right: 15px;
+}

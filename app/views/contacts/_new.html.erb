@@ -1,0 +1,28 @@
+
+<div>
+  <div class="col-xs-12">
+   <%= simple_form_for Contact.new, :html => {:class => 'control-form-special form-horizontal' } do |f| %>
+   <div class="single-forms">
+    <div class="col-xs-12">
+      <%= f.input :message, :as => :text, :required => true, placeholder: "Do you have any questions?", label: false %>
+      <div class= "hidden">
+        <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+      </div>
+    </div>
+ </div>
+   <div class="inline-forms">
+
+  <div class="col-xs-12">
+    <div>
+      <%= f.input :email, :required => true, placeholder: "email", label: false %>
+    </div>
+  </div>
+  </div>
+ <div class="text-center">
+     <%= f.button :submit, 'Ask us!', :class=> "custom-primary-btn form-space" %>
+   </div>
+</div>
+ <% end %>
+</div>
+</div>
+
